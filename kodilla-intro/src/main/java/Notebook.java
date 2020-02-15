@@ -33,13 +33,13 @@ public class Notebook {
         }
     }
 
-    public void checkAll() {
-        if(this.year < 2011){
-            System.out.println("This notebook is OLD!");
-        } else if (this.year < 2012 && this.year > 2019) {
-            System.out.println("This notebook is ok!!!");
-        } else {
-            System.out.println("The notebook is NEW");
+    public void checkHowOld() {
+        if (this.year > 2018) {
+            System.out.println("This notebook is NEW!!!");
+        } else if (this.year < 2018 && this.year > 2012) {
+            System.out.println("This notebook is ok");
+        } else{
+            System.out.println("The notebook is OLD");
         }
     }
 }
