@@ -36,7 +36,7 @@ public class Notebook {
     public void checkHowOld() {
         if (this.year < 2019 && this.price > 500) {
             System.out.println("This notebook is PERFECT!!!");
-        } else if (this.year > 2012 && this.year > 2019 && this.price > 600 && this.price < 2000) {
+        } else if (this.year > 2012 && this.year >2019 && this.price > 600 && this.price < 2000) {
             System.out.println("This notebook is ok");
         } else{
             System.out.println("The notebook is OLD");

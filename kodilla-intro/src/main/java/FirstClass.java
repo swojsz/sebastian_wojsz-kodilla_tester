@@ -24,4 +24,6 @@ public class FirstClass {
         notebook.checkPrice();
         notebook.checkHowOld();
     }
+
+
 }
