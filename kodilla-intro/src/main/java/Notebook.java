@@ -20,7 +20,6 @@ public class Notebook {
         } else {
             System.out.println("This notebook is expensive.");
         }
-
     }
 
     public void checkWeight() {

@@ -16,14 +16,12 @@ public class FirstClass {
         for(Notebook notebook1: notebookList) {
             checkParameters(notebook1);
         }
-
     }
     public static void checkParameters(Notebook notebook){
+
         System.out.println(notebook.weight + " " + notebook.price + " " + notebook.year);
         notebook.checkWeight();
         notebook.checkPrice();
         notebook.checkHowOld();
     }
-
-
 }
