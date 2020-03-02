@@ -1,47 +1,46 @@
 import java.util.Random;
 public class RandomNumbers {
     int sum = 0;
-    int maxNum = 0;
-    int minNum = 30;
-    int result = 0;
-
-    public int makeRandomResult() {
-        Random random = new Random();
-        int result = random.nextInt(31);
-        this.result = result;
-        return result;
-    }
-    public int getResult(){return result;}
+    static int maxNum = new Random().nextInt(31);
+    static int minNum = new Random().nextInt(31);
 
     public int randomSumUpTo5000() {
-        int max = 5000;
-        while (sum <= max)  {
-            sum = sum + makeRandomResult();}
+
+        while (sum <= 5000)  {
+            int wylosowanaLiczba = new Random().nextInt(31);
+            getMinNum(wylosowanaLiczba);
+            getMaxNum(wylosowanaLiczba);
+
+            sum = sum + new Random().nextInt(31);
+        }
         return sum;
     }
-    public int getMinNum() {
 
-        if (result < minNum) {
-            minNum = result;
+    public int getMinNum(int number) {
+
+        if (number < minNum) {
+            minNum = number;
         }
+
+        System.out.println("Minimalna wylosowana liczba " + minNum);
         return minNum;
     }
-    public int getMaxNum() {
-        if (getResult() > maxNum) {
-            maxNum = getResult();
+    public int getMaxNum(int number) {
+        if (number > maxNum) {
+            maxNum = number;
         }
+
+        System.out.println("Minimalna wylosowana liczba " + maxNum);
         return maxNum;
     }
+
     public static void main(String[] args) {
         RandomNumbers numbers = new RandomNumbers();
 
         int resultSum = numbers.randomSumUpTo5000();
         System.out.println(resultSum);
-        int resultNumber = numbers.getResult();
-        System.out.println(resultNumber);
-        int minNumber = numbers.getMinNum();
-        System.out.println(minNumber);
-        int maxNumber = numbers.getMaxNum();
-        System.out.println(maxNumber);
+
+        System.out.println("Wartosc minimalna " + minNum);
+        System.out.println("Wartosc maksymalna " + maxNum);
     }
 }
